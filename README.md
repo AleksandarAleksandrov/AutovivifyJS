@@ -1,4 +1,4 @@
-#Autovivification for javaScript using Proxy objects
+#Autovivification for JavaScript using Proxy objects
 
 After creating an object using Autovivify you can use it as :
 

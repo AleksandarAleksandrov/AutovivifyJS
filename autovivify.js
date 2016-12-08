@@ -9,7 +9,9 @@ function handlers() {
   let handlers = {};
 
   handlers.get = function get(target,key,receiver) {
-      if (Reflect.has( target, key )) {
+      if(key === 'toJSON') {
+        return function() { return target; }
+      } else if (Reflect.has( target, key )) {
           return Reflect.get(target, key, receiver);
       } else {
           let subObj = Autovivify();
